@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".ui.StationsActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/margin_8"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_line"
+                android:layout_toStartOf="@id/img_back"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="RelativeOverlap" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_english_line"
+                android:layout_toStartOf="@id/img_back"
+                android:layout_below="@id/txt_line"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linear_lines"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_station_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_station_english_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:padding="@dimen/margin_8">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/txt_address"
+            app:srcCompat="@drawable/ic_baseline_location_on_24"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_features"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_baseline_directions_bus_23"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/taxi_bus_station"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/public_transport"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_train"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_baseline_apartment_24"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Important_centers"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/important_centers"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_taxi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_baseline_train_24"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scheduling_fa"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scheduling"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_8">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="@string/facilities"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/facilities_fa"
+            android:textColor="@color/white"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_atm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_local_atm_24"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_atm_fa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_atm"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_atm"
+                        android:text="@string/atm_fa"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_atm_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_atm_fa"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_atm"
+                        android:text="@string/atm"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_taxi_facilities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_local_taxi_23"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_taxi_fa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_taxi_facilities"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_taxi_facilities"
+                        android:text="@string/taxi_station_fa"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_taxi_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_taxi_fa"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_taxi_facilities"
+                        android:text="@string/taxi_station"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_parking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_local_parking_24"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_parking_fa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_parking"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_parking"
+                        android:text="@string/parking_fa"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_parking_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_parking_fa"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_parking"
+                        android:text="@string/parking"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_wc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_wc_24"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_wc_fa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_wc"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_wc"
+                        android:text="@string/w_c_fa"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_wc_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_wc_fa"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_wc"
+                        android:text="@string/w_c"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_local_phone_24"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_phone_fa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_phone"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_phone"
+                        android:text="@string/public_phone_fa"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_phone_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_phone_fa"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_phone"
+                        android:text="@string/public_phone"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_elevator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_wc_24"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_elevator_fa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_elevator"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_elevator"
+                        android:text="@string/elevator_fa"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_elevator_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_elevator_fa"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_elevator"
+                        android:text="@string/elevator"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_escalator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_escalator_24"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_escalator_fa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_escalator"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_escalator"
+                        android:text="@string/escalator_fa"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_escalator_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_escalator_fa"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_escalator"
+                        android:text="@string/escalator"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_ticket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_sticky_note_2_24"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_ticket_fa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_ticket"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_ticket"
+                        android:text="@string/ticket_sales_fa"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_ticket_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_ticket_fa"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_ticket"
+                        android:text="@string/ticket_sales"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_bus_station"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_directions_bus_24"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_bus_station_fa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_bus_station"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_bus_station"
+                        android:text="@string/bus_fa"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_img_bus_station_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_bus_station_fa"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_bus_station"
+                        android:text="@string/bus_station"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_water"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_baseline_local_drink_24"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_water_fa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_water"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_water"
+                        android:text="@string/water_fa"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_water_en"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_water_fa"
+                        android:layout_marginEnd="@dimen/margin_8"
+                        android:layout_toStartOf="@id/img_water"
+                        android:text="@string/local_drink"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

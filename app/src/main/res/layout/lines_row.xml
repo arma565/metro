@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:cardElevation="@dimen/margin_8"
+        android:layout_margin="@dimen/margin_8"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_lines"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_dir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_8"
+                app:srcCompat="@drawable/ic_baseline_directions_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_lines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:text="@string/tajrish_fa"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_alignTop="@id/img_dir"
+                app:layout_constraintEnd_toStartOf="@id/img_dir"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_english_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tajrish"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/txt_lines"
+                app:layout_constraintEnd_toStartOf="@id/img_dir"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Metro</string>
+    <string name="metro_tehran">مترو تهران</string>
+    <string name="unSuccess">Unsuccessful</string>
+    <string name="taxi_bus_station">خطوط اتوبوس و تاکسی</string>
+    <string name="public_transport">Public Transport</string>
+    <string name="Important_centers">مراکز مهم اطراف ایستگاه</string>
+    <string name="important_centers">Important Centers</string>
+    <string name="scheduling">Scheduling</string>
+    <string name="scheduling_fa">زمانبندی حرکت قطار</string>
+    <string name="facilities">Facilities</string>
+    <string name="facilities_fa">امکانات</string>
+    <string name="atm">ATM</string>
+    <string name="atm_fa">دستگاه خودپرداز</string>
+    <string name="taxi_station">Taxi Station</string>
+    <string name="taxi_station_fa">ایستگاه تاکسی</string>
+    <string name="parking">Parking</string>
+    <string name="parking_fa">پارکینگ عمومی</string>
+    <string name="w_c">W.C</string>
+    <string name="w_c_fa">سرویس بهداشتی</string>
+    <string name="public_phone">Public Phone</string>
+    <string name="public_phone_fa">تلفن عمومی</string>
+    <string name="elevator">Elevator</string>
+    <string name="elevator_fa">آسانسور</string>
+    <string name="escalator">escalator</string>
+    <string name="escalator_fa">پله برقی</string>
+    <string name="ticket_sales">Ticket Sales</string>
+    <string name="ticket_sales_fa">فروش بلیط</string>
+    <string name="tajrish">Tajrish</string>
+    <string name="tajrish_fa">تجریش</string>
+    <string name="bus_fa">ایستگاه اتوبوس</string>
+    <string name="bus_station">Bus Station</string>
+    <string name="water_fa">آبخوری</string>
+    <string name="local_drink">Local Drink</string>
+    <string name="persian_line">persian line</string>
+    <string name="english_line">english line</string>
+</resources>
